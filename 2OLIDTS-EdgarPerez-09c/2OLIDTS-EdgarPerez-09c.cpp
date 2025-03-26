@@ -40,7 +40,7 @@ void borrarLista(Nodo* cabeza) {
 		Nodo* siguiente = cabeza->siguiente;
 		delete cabeza;
 		cabeza = siguiente;
-		cout << "Elemento borrado";
+		cout << "Elemento borrado ";
 	}
 }
 
@@ -58,13 +58,14 @@ int main()
 
 	for (int i = 0; i < tamanoLista; i++) {
 		int valor;
-		cout << "Ingrese dato" << i + 1 << ": ";
+		cout << "Ingrese dato " << i + 1 << ": ";
 		cin >> valor;
 		//Invocamos nuestra funcion de agregar nodo
 		agregarNodo(cabeza, valor);
 	}
 
 	cout << "Imprimir Lista de numeros" << endl;
+	imprimirLista(cabeza);
 
 	borrarLista(cabeza);
 
